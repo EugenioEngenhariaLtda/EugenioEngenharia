@@ -1,23 +1,36 @@
 ---
 import Header from "../../components/Header.tsx";
-import { BriefcaseBusiness, CalendarClockIcon, ChartBarDecreasing, LaptopMinimalCheckIcon, Megaphone, Newspaper, PencilRuler, Phone, Search, Verified, X } from 'lucide-react';
+import {
+	BriefcaseBusiness,
+	CalendarClockIcon,
+	ChartBarDecreasing,
+	LaptopMinimalCheckIcon,
+	Megaphone,
+	Newspaper,
+	PencilRuler,
+	Phone,
+	Search,
+	Verified,
+	X,
+} from "lucide-react";
 ---
 
 <html lang="pt-BR">
 	<head>
 		<title>Serviço PGR - Eugênio Engenharia</title>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<meta
-			charset="UTF-8"
 			name="description"
 			content="O PGR (Programa de Gerenciamento de Riscos) é um documento obrigatório exigido pela NR-01, que tem como objetivo identificar, avaliar e controlar os riscos ocupacionais presentes nas atividades da empresa."
 		/>
 	</head>
 	<body>
 		<Header client:idle />
-		<section class="w-11/12 xl:w-[50%] flex flex-col  mx-auto">
+		<section class="w-11/12 xl:w-[50%] flex flex-col mx-auto">
 			<div class="mt-24 pb-6 xl:pb-8 border-b-2 border-b-yellow-400">
 				<h2
-					class="text-neutral-700 xl:text-4xl mt-2 xl:mt-2 text-xl  font-semibold flex items-center gap-2"
+					class="text-neutral-700 xl:text-4xl mt-2 xl:mt-2 text-xl font-semibold flex items-center gap-2"
 				>
 					<LaptopMinimalCheckIcon className="w-6 h-6 xl:w-7 xl:h-7" />
 					O que é o PGR e por que sua empresa precisa dele?
@@ -48,7 +61,7 @@ import { BriefcaseBusiness, CalendarClockIcon, ChartBarDecreasing, LaptopMinimal
 					o PGR?
 				</h2>
 				<ul
-					class="mt-2 flex flex-col gap-1 text-md  text-neutral-600 font-light"
+					class="mt-2 flex flex-col gap-1 text-md text-neutral-600 font-light"
 				>
 					<li class="text-neutral-950">
 						• Inventário de riscos ocupacionais (físicos, químicos,
@@ -80,7 +93,7 @@ import { BriefcaseBusiness, CalendarClockIcon, ChartBarDecreasing, LaptopMinimal
 					e guarda
 				</h2>
 				<ul
-					class="mt-2 flex flex-col gap-1 text-md  text-neutral-600 font-light"
+					class="mt-2 flex flex-col gap-1 text-md text-neutral-600 font-light"
 				>
 					<li>
 						• Atualização sempre que houver alterações
@@ -99,7 +112,7 @@ import { BriefcaseBusiness, CalendarClockIcon, ChartBarDecreasing, LaptopMinimal
 					não tiver PGR?
 				</h2>
 				<ul
-					class="mt-4 flex flex-col gap-1 text-md  text-neutral-600 font-light"
+					class="mt-4 flex flex-col gap-1 text-md text-neutral-600 font-light"
 				>
 					<li>• Multas e autuações pela fiscalização do trabalho;</li>
 					<li>• Riscos de acidentes e doenças ocupacionais;</li>
