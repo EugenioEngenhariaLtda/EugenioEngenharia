@@ -74,10 +74,7 @@ export default function Services() {
 					<div className="grid grid-cols-1 xl:grid-cols-3 gap-6 mb-4">
 
 						{/* Meio Ambiente */}
-						<motion.div
-							initial={{ opacity: 0, y: 30 }}
-							whileInView={{ opacity: 1, y: 0 }}
-							transition={{ duration: 0.5 }}
+						<div
 							className="rounded-2xl border-2 border-green-600 
       bg-gradient-to-br from-green-200 to-green-50 shadow-xl 
       hover:-translate-y-1 hover:shadow-2xl transition duration-300 
@@ -94,13 +91,11 @@ export default function Services() {
 								<li>Programa de Recebimento e Controle de Efluentes Não Domésticos – Precend</li>
 								<li>Outorgas</li>
 							</ul>
-						</motion.div>
+						</div>
 
 						{/* Segurança do Trabalho */}
-						<motion.div
-							initial={{ opacity: 0, y: 30 }}
-							whileInView={{ opacity: 1, y: 0 }}
-							transition={{ duration: 0.6 }}
+						<div
+							
 							className="rounded-2xl border-2 border-yellow-600 
 						bg-gradient-to-br from-yellow-200 to-yellow-50 shadow-xl 
       hover:-translate-y-1 hover:shadow-2xl transition duration-300 
@@ -120,13 +115,11 @@ export default function Services() {
 								<li>Programa de Condições e Meio Ambiente de Trabalho na Indústria da Construção – PCMAT</li>
 								<li>Laudos técnicos e perícias de segurança do trabalho</li>
 							</ul>
-						</motion.div>
+						</div>
 
 						{/* Regularização Urbana */}
-						<motion.div
-							initial={{ opacity: 0, y: 30 }}
-							whileInView={{ opacity: 1, y: 0 }}
-							transition={{ duration: 0.7 }}
+						<div
+							
 							className="rounded-2xl border-2 border-neutral-600 
       bg-gradient-to-br from-neutral-400 to-white shadow-xl 
       hover:-translate-y-1 hover:shadow-2xl transition duration-300 
@@ -143,7 +136,7 @@ export default function Services() {
 								<li>Licenciamento de Mesas e Cadeiras</li>
 								<li>Habite-se</li>
 							</ul>
-						</motion.div>
+						</div>
 
 					</div>
 				</div>
