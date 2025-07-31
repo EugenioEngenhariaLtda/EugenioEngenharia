@@ -1,0 +1,28 @@
+---
+import "../index.css";
+import Slider from "../components/Slider";
+import About from "../components/About";
+import Services from "../components/Services";
+import Clients from "../components/Clients";
+import Contact from "../components/Contact";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
+import Blog from "../components/Blog";
+---
+
+<html lang="lient:load pt-BR">
+	<head>
+		<meta charset="UTF-8" />
+		<title>Astro com Tailwind</title>
+	</head>
+	<body>
+		<Header client:idle />
+		<Slider client:visible />
+		<About client:load />
+		<Services client:load />
+		<Clients client:load />
+		<Blog client:load />
+		<Contact client:load />
+		<Footer />
+	</body>
+</html>

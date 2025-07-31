@@ -1,0 +1,99 @@
+---
+import Header from "../../components/Header.tsx";
+import { Lightbulb, Phone, Search, Sprout, X } from 'lucide-react';
+---
+
+<html lang="pt-BR">
+    <head>
+        <title>Licenciamento Ambiental</title>
+        <meta
+            charset="UTF-8"
+            name="description"
+            content="O Licenciamento Ambiental é um procedimento administrativo que autoriza e acompanha a implantação e a operação de empreendimentos e atividades que utilizam recursos naturais ou que possam causar impactos ao meio ambiente."
+        />
+    </head>
+    <body>
+        <Header client:idle />
+        <section class="w-11/12 xl:w-[50%] flex flex-col mx-auto">
+        <div class="mt-24 pb-6 xl:pb-8 border-b-2 border-b-yellow-400">
+          <h2 class="text-neutral-700 xl:text-4xl mt-2 text-xl font-semibold flex items-center gap-2">
+            <Sprout className="w-6 h-6 xl:w-7 xl:h-7" /> O que é o Licenciamento Ambiental e quando ele é exigido?
+          </h2>
+
+          <p class="text-md mt-5 text-neutral-600 font-light">
+            O <strong class="font-semibold">Licenciamento Ambiental</strong> é um procedimento administrativo que autoriza e acompanha a implantação e a operação de empreendimentos e atividades que utilizam recursos naturais ou que possam causar impactos ao meio ambiente.
+          </p>
+          <p class="text-md mt-5 text-neutral-600 font-light">
+            Em <strong class="font-semibold">Minas Gerais,</strong> o processo é regulamentado pela <strong class="font-semibold">Lei Estadual nº 21.972/2016, pelo Decreto nº 47.383/2018,</strong> e pelas normas complementares da <strong class="font-semibold">Secretaria de Estado de Meio Ambiente e Desenvolvimento Sustentável (SEMAD).</strong>
+          </p>
+        </div>
+
+        <div class="mt-4 xl:mt-6 flex flex-col pb-6 xl:pb-8 border-b-2 border-b-yellow-400">
+          <h2 class="text-neutral-800 xl:text-4xl mt-2 text-2xl font-semibold flex items-center gap-2">
+            <Search className="w-5 h-5 xl:w-7 xl:h-7" /> Quem precisa de licenciamento ambiental?
+          </h2>
+          <p class="text-md mt-5 text-neutral-600 font-light">O licenciamento é exigido para atividades que:</p>
+          <ul class="mt-2 flex flex-col gap-1 text-md text-neutral-600 font-light list-disc list-inside">
+            <li>Tenham potencial poluidor ou degradador do meio ambiente;</li>
+            <li>Façam uso significativo de recursos naturais;</li>
+            <li>Gerem resíduos sólidos, efluentes líquidos ou emissões atmosféricas;</li>
+            <li>Enquadrem-se nas listas de atividades licenciáveis publicadas pela SEMAD ou pelo município.</li>
+          </ul>
+          <p class="mt-2">
+            Exemplos: - Indústrias, oficinas, serralherias, lavanderias, postos de combustível, lava-jatos; - Atividades minerárias, agroindustriais, comércio de químicos; - Galpões de triagem, centros de distribuição, entre outros.
+          </p>
+        </div>
+
+        <div class="mt-4 xl:mt-6 flex flex-col pb-6 xl:pb-8 border-b-2 border-b-yellow-400">
+          <h2 class="text-neutral-800 xl:text-4xl mt-2 text-2xl font-semibold flex items-center gap-2">
+            <X className="w-5 h-5 xl:w-7 xl:h-7" /> Riscos de funcionar sem licenciamento
+          </h2>
+          <ul class="mt-2 flex flex-col gap-1 text-md text-neutral-600 font-light list-disc list-inside">
+            <li><strong class="font-semibold">Multas ambientais</strong> e embargos por fiscalização da SEMAD ou prefeitura;</li>
+            <li><strong class="font-semibold">Suspensão de alvarás e licenças;</strong></li>
+            <li>Ações civis públicas por dano ambiental;</li>
+            <li>Dificuldade em obter financiamentos, seguros e parcerias comerciais.</li>
+          </ul>
+        </div>
+
+        <div class="mt-4 xl:mt-6 flex flex-col pb-6 xl:pb-8 border-b-2 border-b-yellow-400">
+          <h2 class="text-neutral-800 xl:text-4xl mt-2 text-2xl font-semibold flex items-center gap-2">
+            <Lightbulb className="w-5 h-5 xl:w-7 xl:h-7" /> Por que contratar um profissional?
+          </h2>
+          <p class="text-md mt-4 text-neutral-600 font-light">
+            O processo de licenciamento envolve: - Diagnóstico ambiental; - Preenchimento de formulários e cadastro no portal SISEMA/MG; - Elaboração de estudos e documentação técnica (planta, memoriais, ART, etc.); - Acompanhamento de pareceres e atendimento de exigências.
+          </p>
+          <p class="text-md mt-4 text-neutral-600 font-light">
+            Contar com um engenheiro especialista garante <strong>agilidade, conformidade legal e segurança técnica</strong> durante todo o processo.
+          </p>
+          <ul class="mt-4 flex flex-col gap-1 text-md text-neutral-600 font-light list-disc list-inside">
+            <li>Multas e autuações pela fiscalização do trabalho;</li>
+            <li>Riscos de acidentes e doenças ocupacionais;</li>
+            <li>Responsabilização civil e criminal por negligência;</li>
+            <li>Aumento de passivos trabalhistas e dificuldades com seguros.</li>
+          </ul>
+        </div>
+
+        <div class="mt-4 xl:mt-6 flex flex-col pb-6 xl:pb-8">
+          <h2 class="text-neutral-800 xl:text-4xl mt-2 text-2xl font-semibold flex items-center gap-2">
+            <Phone className="w-5 h-5 xl:w-7 xl:h-7" /> Precisa regularizar sua empresa ambientalmente?
+          </h2>
+          <p class="text-md mt-4 text-neutral-600 font-light">
+            Atuamos com: - Licenciamento municipal e estadual - Elaboração de documentos técnicos e ART; - Atendimento em Minas Gerais, com foco em micro e pequenas empresas.
+          </p>
+          <p class="text-md mt-2 text-neutral-600 font-light">
+            Fale conosco para saber se sua atividade exige licenciamento e como iniciar o processo com segurança.
+          </p>
+        </div>
+
+        <a
+          href="https://wa.me/5531p83320618?text=Olá,%20tenho%20interesse%20nos%20seus%20serviços!"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="xl:w-1/2 mx-auto mt-2 mb-4 flex justify-center p-2 px-3 rounded-xl bg-yellow-400 font-semibold"
+        >
+          Entrar em contato no WhatsApp
+        </a>
+      </section>
+    </body>
+</html>
