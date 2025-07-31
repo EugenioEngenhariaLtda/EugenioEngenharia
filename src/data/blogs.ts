@@ -1,9 +1,9 @@
 import blog1 from "../assets/service2.jpg?url"
 import blog2 from "../assets/service1.jpg?url"
 import blog3 from "../assets/service3.jpg?url"
-import blog4 from "../assets/service4.webp?url"
+import blog4 from "../assets/service4.jpg?url"
 import blog5 from "../assets/imgMobile.jpg?url"
-import pgr from "../assets/slider1.webp?url"
+import pgr from "../assets/slider1.jpg?url"
 import ctf from "../assets/Cadastro-Tecnico-Federal-CTF.jpg?url"
 
 export type BlogCardsData = {
