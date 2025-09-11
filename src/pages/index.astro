@@ -12,10 +12,26 @@ import Blog from "../components/Blog";
 
 <html lang="lient:load pt-BR">
 	<head>
-		<meta charset="UTF-8" 
-		name="viewport" content="width=device-width, initial-scale=1"/>
-		<link rel="icon" type="image/png" href="/logo.jpeg">
+		<meta
+			charset="UTF-8"
+			name="viewport"
+			content="width=device-width, initial-scale=1"
+		/>
+		<link rel="icon" type="image/png" href="/logo.jpeg" />
 		<title>Eugenio Engenharia</title>
+		<!-- Google tag (gtag.js) -->
+		<script
+			async
+			src="https://www.googletagmanager.com/gtag/js?id=AW-17372022613"
+		></script>
+		<script is:inline>
+			window.dataLayer = window.dataLayer || [];
+			function gtag() {
+				dataLayer.push(arguments);
+			}
+			gtag("js", new Date());
+			gtag("config", "AW-17372022613");
+		</script>
 	</head>
 	<body>
 		<Header client:idle />

@@ -8,7 +8,20 @@ import Header from "../../components/Header.tsx";
             Cadastro Técnico Federal (CTF) — Regularize sua empresa junto ao
             IBAMA
         </title>
-        <link rel="icon" type="image/png" href="/logo.jpeg">
+        <!-- Google tag (gtag.js) -->
+        <script
+            async
+            src="https://www.googletagmanager.com/gtag/js?id=AW-17372022613"
+        ></script>
+        <script is:inline>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+            gtag("js", new Date());
+            gtag("config", "AW-17372022613");
+        </script>
+        <link rel="icon" type="image/png" href="/logo.jpeg" />
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta
@@ -61,8 +74,7 @@ import Header from "../../components/Header.tsx";
                         a proteção do meio ambiente.
                     </li>
                     <li>
-                        <strong class="font-semibold"
-                            >Evite penalidades:</strong
+                        <strong class="font-semibold">Evite penalidades:</strong
                         > Manter o cadastro atualizado evita multas, embargos e problemas
                         para obter licenças ambientais.
                     </li>
