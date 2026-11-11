@@ -2,6 +2,7 @@
 import "../index.css";
 import Header from "../components/Header.tsx";
 import Footer from "../components/Footer.tsx";
+import logoHeader from "../assets/logoHeader.png";
 import { ArrowRight, CheckCircle2, MapPin } from "lucide-react";
 
 type ContentSection = {
@@ -128,7 +129,7 @@ const faqSchema = faqs.length
 					</div>
 
 					<aside class="bg-white text-neutral-800 rounded-3xl p-7 md:p-8 shadow-2xl border-t-8 border-yellow-400">
-						<img src="/logoHeader.png" alt="Eugênio Engenharia" class="h-20 object-contain object-left mb-5" />
+						<img src={logoHeader.src} alt="Eugênio Engenharia" class="h-20 object-contain object-left mb-5" />
 						<h2 class="text-2xl font-semibold mb-5">Como conduzimos</h2>
 						<ul class="space-y-4">
 							{highlights.map((item) => (
