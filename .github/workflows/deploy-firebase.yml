@@ -2,11 +2,6 @@ name: Publicar site no Firebase Hosting
 
 on:
   workflow_dispatch:
-    inputs:
-      firebase_project_id:
-        description: "ID do projeto Firebase Hosting"
-        required: true
-        type: string
 
 permissions:
   contents: read
@@ -37,7 +32,7 @@ jobs:
       - name: Deploy Firebase Hosting
         env:
           FIREBASE_SERVICE_ACCOUNT: ${{ secrets.FIREBASE_SERVICE_ACCOUNT }}
-          PROJECT_ID: ${{ inputs.firebase_project_id }}
+          PROJECT_ID: project-ca4db302-698e-45b6-837
         run: |
           printf '%s' "$FIREBASE_SERVICE_ACCOUNT" > "$RUNNER_TEMP/firebase-service-account.json"
           export GOOGLE_APPLICATION_CREDENTIALS="$RUNNER_TEMP/firebase-service-account.json"
