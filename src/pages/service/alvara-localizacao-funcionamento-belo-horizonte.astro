@@ -1,0 +1,34 @@
+---
+import ServiceLanding from "../../layouts/ServiceLanding.astro";
+const sections = [
+ { title: "O primeiro passo é entender a viabilidade do endereço", paragraphs: ["Antes da emissão do Alvará de Localização e Funcionamento, é necessário verificar se as atividades pretendidas podem ser exercidas no endereço e quais exigências precisam ser atendidas.", "Não basta analisar apenas o CNPJ. É necessário avaliar atividades, endereço, características do imóvel e exigências indicadas pelo Município."] },
+ { title: "Minha empresa precisa de Alvará?", paragraphs: ["Nem sempre. Existem situações em que determinadas atividades podem ser dispensadas, conforme o enquadramento aplicável. A análise inicial identifica se o empreendimento precisa de ALF, está dispensado ou depende de outras regularizações."] },
+ { title: "Como a Eugênio Engenharia conduz a regularização", bullets: ["Análise do empreendimento, CNPJ, atividades e endereço.", "Interpretação da Consulta de Viabilidade.", "Diagnóstico das pendências e documentos necessários.", "Condução das regularizações contratadas.", "Solicitação e acompanhamento do ALF quando aplicável."] },
+ { title: "Vai alugar ou comprar um imóvel para a empresa?", paragraphs: ["Antes de fechar o imóvel, é recomendável verificar se as atividades pretendidas são admitidas naquele endereço. Isso pode evitar reformas, contratos e investimentos em um local incompatível com a atividade."] },
+ { title: "Já tenho empresa funcionando, mas o alvará está pendente", paragraphs: ["Primeiro identificamos a origem da pendência. Em muitos casos, o problema não está no pedido do alvará em si, mas em uma exigência anterior que precisa ser resolvida."] },
+];
+const faqs = [
+ { question: "A Consulta de Viabilidade já é o Alvará?", answer: "Não. A Consulta de Viabilidade verifica a compatibilidade das atividades com o endereço e apresenta exigências. O ALF é uma etapa posterior." },
+ { question: "Toda empresa em Belo Horizonte precisa de alvará?", answer: "Não necessariamente. A necessidade depende do enquadramento aplicável ao empreendimento." },
+ { question: "Já tenho CNPJ. Isso significa que estou regular na Prefeitura?", answer: "Não necessariamente. O CNPJ e a regularidade municipal do estabelecimento são aspectos diferentes." },
+ { question: "O alvará pode depender do Licenciamento Ambiental?", answer: "Sim. Dependendo do empreendimento, outras regularizações podem ser exigidas antes da conclusão do ALF." },
+ { question: "A Eugênio garante a emissão do alvará?", answer: "Não. A decisão final compete ao órgão público responsável. A Eugênio Engenharia conduz tecnicamente os serviços contratados." },
+];
+const relatedLinks = [
+ { label: "Regularização de Empresa", href: "/service/regularizacao-empresa-belo-horizonte" },
+ { label: "Licenciamento Ambiental", href: "/service/licenciamento-ambiental" },
+ { label: "AVCB / CLCB / PSCIP", href: "/service/avcb" },
+ { label: "Engenho de Publicidade", href: "/service/licenca-engenho-publicidade-belo-horizonte" },
+];
+---
+<ServiceLanding
+ seoTitle="Alvará de Localização e Funcionamento em Belo Horizonte | Eugênio Engenharia"
+ metaDescription="Precisa obter ou regularizar o Alvará de Localização e Funcionamento em Belo Horizonte? A Eugênio Engenharia analisa a viabilidade e conduz o processo."
+ canonicalPath="/service/alvara-localizacao-funcionamento-belo-horizonte"
+ title="Alvará de Localização e Funcionamento em Belo Horizonte"
+ subtitle="Precisa abrir, alterar ou regularizar sua empresa? Analisamos a viabilidade, identificamos pendências e conduzimos o processo de regularização."
+ whatsappMessage="Olá, vi a página sobre Alvará de Localização e Funcionamento em Belo Horizonte e gostaria de avaliar minha empresa."
+ sections={sections}
+ faqs={faqs}
+ relatedLinks={relatedLinks}
+/>
