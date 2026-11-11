@@ -1,190 +1,116 @@
 ---
-import Header from "../../components/Header.tsx";
-import { Lightbulb, Phone, Search, Sprout, X } from "lucide-react";
+import ServiceLanding from "../../layouts/ServiceLanding.astro";
+
+const sections = [
+	{
+		title: "Como saber se minha empresa precisa de Licenciamento Ambiental?",
+		paragraphs: [
+			"Nem toda atividade precisa passar pelo mesmo procedimento ambiental. A necessidade depende da atividade exercida, do porte, da localização e das características do empreendimento.",
+			"Antes de iniciar um processo, analisamos CNAEs, endereço, processos produtivos, equipamentos, resíduos, efluentes, emissões, ruído e demais aspectos relevantes para identificar o enquadramento aplicável."
+		]
+	},
+	{
+		title: "Nem toda empresa precisa da mesma modalidade",
+		paragraphs: [
+			"O licenciamento ambiental pode assumir diferentes modalidades conforme o enquadramento do empreendimento. Em Belo Horizonte podem existir procedimentos simplificados, concomitantes, trifásicos e corretivos, conforme as características e a situação da atividade.",
+			"A modalidade correta deve ser definida a partir do caso concreto, evitando abrir um processo inadequado ou produzir estudos que não se aplicam ao empreendimento."
+		]
+	},
+	{
+		title: "Como a Eugênio Engenharia conduz o processo",
+		bullets: [
+			"Caracterização do empreendimento e levantamento das atividades.",
+			"Análise do enquadramento ambiental aplicável.",
+			"Levantamento de licenças, condicionantes e documentos existentes.",
+			"Preparação dos estudos, formulários e documentos previstos no escopo contratado.",
+			"Protocolo e acompanhamento do processo perante o órgão competente.",
+			"Análise de solicitações de complementação e definição das providências cabíveis."
+		]
+	},
+	{
+		title: "Minha empresa já está funcionando sem licença ambiental",
+		paragraphs: [
+			"A situação deve ser analisada antes de definir o procedimento. Dependendo do enquadramento, pode existir necessidade de regularização ambiental corretiva.",
+			"O primeiro passo é caracterizar a operação existente e verificar quais exigências efetivamente se aplicam."
+		]
+	},
+	{
+		title: "Minha licença ambiental está vencendo",
+		paragraphs: [
+			"A renovação não deve começar apenas na data de vencimento. Dependendo da modalidade e das condições da licença, pode ser necessário verificar condicionantes, reunir evidências, atualizar informações e preparar documentos técnicos.",
+			"A preparação antecipada reduz o risco de descobrir pendências somente próximo ao vencimento."
+		]
+	},
+	{
+		title: "Licenciamento Ambiental e outras regularizações",
+		paragraphs: [
+			"Durante a caracterização podem ser identificadas outras demandas, como PGRS, PRECEND, controle de efluentes, ruído ambiental, IBAMA/CTF/TCFA/RAPP, segurança contra incêndio ou Alvará de Localização e Funcionamento.",
+			"Quando uma demanda adicional estiver fora do escopo contratado, ela é apresentada separadamente para avaliação do cliente."
+		]
+	},
+	{
+		title: "Regularizar é apenas a primeira etapa",
+		paragraphs: [
+			"Uma licença emitida pode gerar condicionantes, relatórios, monitoramentos, evidências, prazos e necessidade de renovação.",
+			"Por isso, a Eugênio Engenharia também atua com Gestão da Regularidade, acompanhando obrigações e documentos para que o empreendimento continue regular."
+		]
+	}
+];
+
+const faqs = [
+	{
+		question: "Toda empresa precisa de licença ambiental?",
+		answer: "Não. A necessidade depende da atividade, do porte, da localização e das características do empreendimento."
+	},
+	{
+		question: "Como descubro se minha empresa precisa?",
+		answer: "O primeiro passo é analisar a atividade, o endereço e as características reais do empreendimento para identificar o enquadramento aplicável."
+	},
+	{
+		question: "Já tenho empresa funcionando. Ainda posso regularizar?",
+		answer: "A situação pode ser analisada e, quando aplicável, conduzida por meio do procedimento de regularização correspondente."
+	},
+	{
+		question: "Vocês fazem renovação de licença ambiental?",
+		answer: "Sim. Podemos analisar a licença existente, condicionantes e documentação para estruturar o processo de renovação."
+	},
+	{
+		question: "A licença ambiental garante o Alvará?",
+		answer: "São procedimentos diferentes. Dependendo do empreendimento, a regularização ambiental pode ser uma das exigências necessárias para a conclusão do Alvará."
+	},
+	{
+		question: "A Eugênio garante a aprovação da licença?",
+		answer: "Não. A decisão final pertence ao órgão ambiental competente. A Eugênio Engenharia realiza a análise e a condução técnica dos serviços contratados."
+	},
+	{
+		question: "Depois da licença vocês acompanham as condicionantes?",
+		answer: "Sim, quando contratado. Esse acompanhamento pode integrar a Gestão da Regularidade."
+	}
+];
+
+const relatedLinks = [
+	{ label: "Regularização de Empresa", href: "/service/regularizacao-empresa-belo-horizonte" },
+	{ label: "Alvará de Funcionamento", href: "/service/alvara-localizacao-funcionamento-belo-horizonte" },
+	{ label: "PGRS", href: "/service/pgrs" },
+	{ label: "PRECEND", href: "/service/precend" },
+	{ label: "AVCB / CLCB / PSCIP", href: "/service/avcb" }
+];
 ---
 
-<html lang="pt-BR">
-	<head>
-		<title>Licenciamento Ambiental</title>
-		<!-- Google tag (gtag.js) -->
-		<script
-			async
-			src="https://www.googletagmanager.com/gtag/js?id=AW-17372022613"
-		></script>
-		<script is:inline>
-			window.dataLayer = window.dataLayer || [];
-			function gtag() {
-				dataLayer.push(arguments);
-			}
-			gtag("js", new Date());
-			gtag("config", "AW-17372022613");
-		</script>
-		<meta charset="UTF-8" />
-		<link rel="icon" type="image/png" href="/logo.jpeg" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<meta
-			name="description"
-			content="O Licenciamento Ambiental é um procedimento administrativo que autoriza e acompanha a implantação e a operação de empreendimentos e atividades que utilizam recursos naturais ou que possam causar impactos ao meio ambiente."
-		/>
-	</head>
-	<body>
-		<Header client:idle />
-		<section class="w-11/12 xl:w-[50%] flex flex-col mx-auto">
-			<div class="mt-24 pb-6 xl:pb-8 border-b-2 border-b-yellow-400">
-				<h2
-					class="text-neutral-700 xl:text-4xl mt-2 text-xl font-semibold flex items-center gap-2"
-				>
-					<Sprout className="w-6 h-6 xl:w-7 xl:h-7" /> O que é o Licenciamento
-					Ambiental e quando ele é exigido?
-				</h2>
-
-				<p class="text-md mt-5 text-neutral-600 font-light">
-					O <strong class="font-semibold"
-						>Licenciamento Ambiental</strong
-					> é um procedimento administrativo que autoriza e acompanha a
-					implantação e a operação de empreendimentos e atividades que
-					utilizam recursos naturais ou que possam causar impactos ao meio
-					ambiente.
-				</p>
-				<p class="text-md mt-5 text-neutral-600 font-light">
-					Em <strong class="font-semibold">Minas Gerais,</strong> o processo
-					é regulamentado pela <strong class="font-semibold"
-						>Lei Estadual nº 21.972/2016, pelo Decreto nº
-						47.383/2018,</strong
-					> e pelas normas complementares da <strong
-						class="font-semibold"
-						>Secretaria de Estado de Meio Ambiente e Desenvolvimento
-						Sustentável (SEMAD).</strong
-					>
-				</p>
-			</div>
-
-			<div
-				class="mt-4 xl:mt-6 flex flex-col pb-6 xl:pb-8 border-b-2 border-b-yellow-400"
-			>
-				<h2
-					class="text-neutral-800 xl:text-4xl mt-2 text-2xl font-semibold flex items-center gap-2"
-				>
-					<Search className="w-5 h-5 xl:w-7 xl:h-7" /> Quem precisa de
-					licenciamento ambiental?
-				</h2>
-				<p class="text-md mt-5 text-neutral-600 font-light">
-					O licenciamento é exigido para atividades que:
-				</p>
-				<ul
-					class="mt-2 flex flex-col gap-1 text-md text-neutral-600 font-light list-disc list-inside"
-				>
-					<li>
-						Tenham potencial poluidor ou degradador do meio
-						ambiente;
-					</li>
-					<li>Façam uso significativo de recursos naturais;</li>
-					<li>
-						Gerem resíduos sólidos, efluentes líquidos ou emissões
-						atmosféricas;
-					</li>
-					<li>
-						Enquadrem-se nas listas de atividades licenciáveis
-						publicadas pela SEMAD ou pelo município.
-					</li>
-				</ul>
-				<p class="mt-2">
-					Exemplos: - Indústrias, oficinas, serralherias, lavanderias,
-					postos de combustível, lava-jatos; - Atividades minerárias,
-					agroindustriais, comércio de químicos; - Galpões de triagem,
-					centros de distribuição, entre outros.
-				</p>
-			</div>
-
-			<div
-				class="mt-4 xl:mt-6 flex flex-col pb-6 xl:pb-8 border-b-2 border-b-yellow-400"
-			>
-				<h2
-					class="text-neutral-800 xl:text-4xl mt-2 text-2xl font-semibold flex items-center gap-2"
-				>
-					<X className="w-5 h-5 xl:w-7 xl:h-7" /> Riscos de funcionar sem
-					licenciamento
-				</h2>
-				<ul
-					class="mt-2 flex flex-col gap-1 text-md text-neutral-600 font-light list-disc list-inside"
-				>
-					<li>
-						<strong class="font-semibold">Multas ambientais</strong>
-						e embargos por fiscalização da SEMAD ou prefeitura;
-					</li>
-					<li>
-						<strong class="font-semibold"
-							>Suspensão de alvarás e licenças;</strong
-						>
-					</li>
-					<li>Ações civis públicas por dano ambiental;</li>
-					<li>
-						Dificuldade em obter financiamentos, seguros e parcerias
-						comerciais.
-					</li>
-				</ul>
-			</div>
-
-			<div
-				class="mt-4 xl:mt-6 flex flex-col pb-6 xl:pb-8 border-b-2 border-b-yellow-400"
-			>
-				<h2
-					class="text-neutral-800 xl:text-4xl mt-2 text-2xl font-semibold flex items-center gap-2"
-				>
-					<Lightbulb className="w-5 h-5 xl:w-7 xl:h-7" /> Por que contratar
-					um profissional?
-				</h2>
-				<p class="text-md mt-4 text-neutral-600 font-light">
-					O processo de licenciamento envolve: - Diagnóstico
-					ambiental; - Preenchimento de formulários e cadastro no
-					portal SISEMA/MG; - Elaboração de estudos e documentação
-					técnica (planta, memoriais, ART, etc.); - Acompanhamento de
-					pareceres e atendimento de exigências.
-				</p>
-				<p class="text-md mt-4 text-neutral-600 font-light">
-					Contar com um engenheiro especialista garante <strong
-						>agilidade, conformidade legal e segurança técnica</strong
-					> durante todo o processo.
-				</p>
-				<ul
-					class="mt-4 flex flex-col gap-1 text-md text-neutral-600 font-light list-disc list-inside"
-				>
-					<li>Multas e autuações pela fiscalização do trabalho;</li>
-					<li>Riscos de acidentes e doenças ocupacionais;</li>
-					<li>Responsabilização civil e criminal por negligência;</li>
-					<li>
-						Aumento de passivos trabalhistas e dificuldades com
-						seguros.
-					</li>
-				</ul>
-			</div>
-
-			<div class="mt-4 xl:mt-6 flex flex-col pb-6 xl:pb-8">
-				<h2
-					class="text-neutral-800 xl:text-4xl mt-2 text-2xl font-semibold flex items-center gap-2"
-				>
-					<Phone className="w-5 h-5 xl:w-7 xl:h-7" /> Precisa regularizar
-					sua empresa ambientalmente?
-				</h2>
-				<p class="text-md mt-4 text-neutral-600 font-light">
-					Atuamos com: - Licenciamento municipal e estadual -
-					Elaboração de documentos técnicos e ART; - Atendimento em
-					Minas Gerais, com foco em micro e pequenas empresas.
-				</p>
-				<p class="text-md mt-2 text-neutral-600 font-light">
-					Fale conosco para saber se sua atividade exige licenciamento
-					e como iniciar o processo com segurança.
-				</p>
-			</div>
-
-			<a
-				href="https://wa.me/5531p83320618?text=Olá,%20tenho%20interesse%20nos%20seus%20serviços!"
-				target="_blank"
-				rel="noopener noreferrer"
-				class="xl:w-1/2 mx-auto mt-2 mb-4 flex justify-center p-2 px-3 rounded-xl bg-yellow-400 font-semibold"
-			>
-				Entrar em contato no WhatsApp
-			</a>
-		</section>
-	</body>
-</html>
+<ServiceLanding
+	seoTitle="Licenciamento Ambiental em Belo Horizonte | Eugênio Engenharia"
+	metaDescription="Precisa obter, renovar ou regularizar uma licença ambiental em Belo Horizonte? A Eugênio Engenharia avalia o enquadramento e conduz o processo."
+	canonicalPath="/service/licenciamento-ambiental"
+	title="Licenciamento Ambiental em Belo Horizonte"
+	subtitle="Avaliamos o enquadramento do empreendimento, identificamos as exigências aplicáveis e conduzimos tecnicamente o processo de regularização ambiental."
+	whatsappMessage="Olá, vi a página sobre Licenciamento Ambiental em Belo Horizonte e gostaria de avaliar o enquadramento da minha empresa."
+	highlights={[
+		"Diagnóstico antes da abertura do processo",
+		"Licenciamento municipal e estadual conforme o caso",
+		"Renovação, regularização corretiva e acompanhamento",
+		"Gestão de condicionantes e prazos quando contratada"
+	]}
+	sections={sections}
+	faqs={faqs}
+	relatedLinks={relatedLinks}
+/>
