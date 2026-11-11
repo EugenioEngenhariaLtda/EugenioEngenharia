@@ -1,0 +1,34 @@
+---
+import ServiceLanding from "../../layouts/ServiceLanding.astro";
+const sections = [
+ { title: "O que é um engenho de publicidade?", paragraphs: ["Engenho de publicidade é o dispositivo utilizado para apresentar mensagens de identificação ou publicidade, como placas, painéis, letreiros e totens. A própria identificação visual instalada na fachada de uma empresa pode estar sujeita às regras municipais.", "Nem todo engenho segue o mesmo procedimento. Antes de protocolar um pedido, é importante verificar suas características e o enquadramento correto."] },
+ { title: "Toda placa precisa de licença em Belo Horizonte?", paragraphs: ["Não necessariamente. Existem situações em que determinados engenhos simples podem ser dispensados de licenciamento prévio, desde que atendam aos critérios aplicáveis.", "A análise correta evita tanto manter uma instalação irregular quanto abrir um processo desnecessário."] },
+ { title: "Como a Eugênio Engenharia conduz a regularização", bullets: ["Análise do estabelecimento e das características do engenho.", "Verificação do enquadramento e da necessidade de licenciamento.", "Preparação da documentação aplicável ao caso.", "Protocolo e acompanhamento junto à Prefeitura de Belo Horizonte.", "Orientação sobre o documento emitido e demais pendências identificadas."] },
+ { title: "Já tenho uma placa instalada", paragraphs: ["A existência de uma placa, letreiro ou painel já instalado não significa automaticamente que ele esteja regular perante o Município. Avaliamos a situação atual e identificamos o procedimento aplicável."] },
+ { title: "Vai instalar uma placa nova?", paragraphs: ["O ideal é avaliar as regras antes da fabricação e instalação. Uma análise prévia pode identificar limitações de dimensões, posicionamento, iluminação e características do engenho, reduzindo o risco de produzir uma solução que depois precise ser modificada."] },
+];
+const faqs = [
+ { question: "Placa com o nome da empresa precisa de licença?", answer: "Depende das características da placa. Alguns engenhos podem se enquadrar nas condições de dispensa, enquanto outros precisam de licença." },
+ { question: "Letreiro luminoso precisa de licença?", answer: "A iluminação é uma característica relevante para o enquadramento. É necessário analisar o conjunto das condições do engenho." },
+ { question: "Posso instalar a placa primeiro e regularizar depois?", answer: "O recomendado é analisar as regras antes da instalação para reduzir o risco de investimento em uma solução incompatível com as exigências aplicáveis." },
+ { question: "A Eugênio Engenharia fabrica placas e letreiros?", answer: "Não. A Eugênio Engenharia atua na análise técnica e na regularização. A fabricação e a instalação são executadas por fornecedor especializado." },
+ { question: "A Eugênio garante a aprovação da licença?", answer: "Não. A decisão final compete ao órgão público responsável. A Eugênio Engenharia conduz tecnicamente o processo e executa o escopo contratado." },
+];
+const relatedLinks = [
+ { label: "Licença de Toldo", href: "/service/licenca-toldo-belo-horizonte" },
+ { label: "Mesa e Cadeira", href: "/service/licenca-mesa-cadeira-belo-horizonte" },
+ { label: "Alvará de Funcionamento", href: "/service/alvara-localizacao-funcionamento-belo-horizonte" },
+ { label: "Regularização de Empresa", href: "/service/regularizacao-empresa-belo-horizonte" },
+];
+---
+<ServiceLanding
+ seoTitle="Licença de Engenho de Publicidade em Belo Horizonte | Eugênio Engenharia"
+ metaDescription="Regularize placa, letreiro, painel ou totem em Belo Horizonte. A Eugênio Engenharia avalia o enquadramento e conduz o processo junto à PBH."
+ canonicalPath="/service/licenca-engenho-publicidade-belo-horizonte"
+ title="Licença de Engenho de Publicidade em Belo Horizonte"
+ subtitle="Precisa regularizar placa, letreiro, painel ou totem? Avaliamos o enquadramento e conduzimos tecnicamente o processo de regularização."
+ whatsappMessage="Olá, vi a página sobre Licença de Engenho de Publicidade em Belo Horizonte e gostaria de avaliar meu caso."
+ sections={sections}
+ faqs={faqs}
+ relatedLinks={relatedLinks}
+/>
