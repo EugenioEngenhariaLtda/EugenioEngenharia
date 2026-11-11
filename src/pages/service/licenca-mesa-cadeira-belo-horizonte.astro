@@ -1,0 +1,34 @@
+---
+import ServiceLanding from "../../layouts/ServiceLanding.astro";
+const sections = [
+ { title: "Quer utilizar mesas e cadeiras na área externa?", paragraphs: ["Bares, restaurantes, lanchonetes, cafés e outros estabelecimentos podem utilizar determinadas áreas externas para mesas e cadeiras, desde que atendam às condições aplicáveis e realizem a regularização necessária."] },
+ { title: "Meu estabelecimento pode colocar mesas na calçada?", paragraphs: ["Isso depende das características do imóvel, do passeio, da atividade exercida e da forma de ocupação pretendida. A circulação de pedestres e a acessibilidade precisam ser preservadas."] },
+ { title: "Como a Eugênio Engenharia conduz o processo", bullets: ["Análise do endereço, atividade e situação do estabelecimento.", "Avaliação do espaço disponível e das interferências existentes.", "Definição da ocupação pretendida.", "Preparação da documentação e croquis aplicáveis.", "Protocolo e acompanhamento junto à Prefeitura de Belo Horizonte."] },
+ { title: "Já uso mesas e cadeiras na área externa", paragraphs: ["O fato de o estabelecimento utilizar a área externa há algum tempo não significa que a ocupação esteja regular. Avaliamos as condições existentes e identificamos o procedimento adequado."] },
+ { title: "A licença faz parte da regularização do estabelecimento", paragraphs: ["A licença de mesa e cadeira é uma regularização complementar. A situação do estabelecimento, do Alvará de Localização e Funcionamento e de outras licenças também pode interferir na análise."] },
+];
+const faqs = [
+ { question: "Restaurante pode colocar mesas na calçada?", answer: "Pode haver possibilidade, desde que sejam atendidas as condições aplicáveis ao estabelecimento e ao espaço utilizado." },
+ { question: "Preciso ter Alvará para pedir a licença?", answer: "A situação do estabelecimento e do Alvará de Localização e Funcionamento deve ser considerada na análise." },
+ { question: "Posso utilizar o afastamento frontal do imóvel?", answer: "Em determinadas condições pode haver possibilidade, mas o caso concreto precisa ser analisado." },
+ { question: "Já fui fiscalizado. A Eugênio pode analisar?", answer: "Sim. Podemos avaliar a documentação recebida, a situação do estabelecimento e a ocupação existente." },
+ { question: "A Eugênio garante a emissão da licença?", answer: "Não. A decisão final compete ao órgão público responsável. A Eugênio Engenharia conduz tecnicamente o serviço contratado." },
+];
+const relatedLinks = [
+ { label: "Licença de Toldo", href: "/service/licenca-toldo-belo-horizonte" },
+ { label: "Engenho de Publicidade", href: "/service/licenca-engenho-publicidade-belo-horizonte" },
+ { label: "Alvará de Funcionamento", href: "/service/alvara-localizacao-funcionamento-belo-horizonte" },
+ { label: "Regularização de Empresa", href: "/service/regularizacao-empresa-belo-horizonte" },
+];
+---
+<ServiceLanding
+ seoTitle="Licença de Mesa e Cadeira em Belo Horizonte | Eugênio Engenharia"
+ metaDescription="Precisa colocar mesas e cadeiras no passeio em Belo Horizonte? A Eugênio Engenharia avalia o local e conduz a regularização junto à PBH."
+ canonicalPath="/service/licenca-mesa-cadeira-belo-horizonte"
+ title="Licença de Mesa e Cadeira em Belo Horizonte"
+ subtitle="Quer utilizar a área externa do estabelecimento? Avaliamos o espaço, a atividade e as condições aplicáveis antes de conduzir a regularização."
+ whatsappMessage="Olá, vi a página sobre Licença de Mesa e Cadeira em Belo Horizonte e gostaria de avaliar meu estabelecimento."
+ sections={sections}
+ faqs={faqs}
+ relatedLinks={relatedLinks}
+/>

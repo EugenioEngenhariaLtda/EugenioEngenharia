@@ -1,0 +1,35 @@
+---
+import ServiceLanding from "../../layouts/ServiceLanding.astro";
+const sections = [
+ { title: "Regularizar uma empresa não significa apenas obter um alvará", paragraphs: ["A regularidade de um empreendimento pode envolver diferentes documentos, licenças e obrigações. Dependendo da atividade, do endereço e das características do imóvel, podem existir exigências ambientais, urbanísticas, de incêndio, saneamento, resíduos e outras.", "A pergunta inicial deve ser: o que realmente falta para esta empresa ficar regular?"] },
+ { title: "O que pode fazer parte da regularização?", bullets: ["Consulta de Viabilidade e Alvará de Localização e Funcionamento.", "Licenciamento Ambiental.", "AVCB, CLCB ou PSCIP.", "PRECEND e controle de efluentes.", "PGRS e gestão de resíduos.", "IBAMA / CTF / TCFA / RAPP.", "Engenho de Publicidade, Toldo e Mesa e Cadeira.", "Outras exigências aplicáveis ao empreendimento."] },
+ { title: "Como a Eugênio Engenharia conduz a regularização", bullets: ["Diagnóstico do empreendimento e dos documentos existentes.", "Identificação das exigências aplicáveis.", "Plano de regularização por prioridade e dependência.", "Condução dos serviços contratados.", "Organização da continuidade e dos prazos quando aplicável."] },
+ { title: "Recebi uma fiscalização ou notificação", paragraphs: ["O primeiro passo é entender exatamente o que o órgão está exigindo. A Eugênio Engenharia pode analisar a documentação recebida, avaliar a situação do empreendimento e identificar as providências técnicas necessárias."] },
+ { title: "Regularizar e continuar regular", paragraphs: ["Concluir um processo resolve a necessidade daquele momento. Mas diversos documentos possuem vencimentos, condicionantes e obrigações periódicas. Por isso, além da regularização, a Eugênio também estrutura a Gestão da Regularidade quando aplicável."] },
+];
+const faqs = [
+ { question: "Tenho CNPJ. Minha empresa já está regular?", answer: "Não necessariamente. O CNPJ formaliza a pessoa jurídica, mas o funcionamento do empreendimento pode depender de licenças e autorizações específicas." },
+ { question: "Qual é o primeiro documento que devo tirar?", answer: "Depende da situação da empresa. O correto é analisar atividade, endereço e documentos existentes antes de definir a sequência." },
+ { question: "Toda empresa precisa de licença ambiental?", answer: "Não. A necessidade depende da atividade e das características do empreendimento." },
+ { question: "Posso contratar apenas uma regularização específica?", answer: "Sim. O escopo pode ser definido para uma demanda específica. Outras pendências identificadas são informadas separadamente." },
+ { question: "Depois de regularizar, vocês acompanham os vencimentos?", answer: "Sim, quando contratado. A Gestão da Regularidade pode acompanhar documentos, obrigações, condicionantes, prazos e renovações." },
+];
+const relatedLinks = [
+ { label: "Alvará de Funcionamento", href: "/service/alvara-localizacao-funcionamento-belo-horizonte" },
+ { label: "Licenciamento Ambiental", href: "/service/licenciamento-ambiental" },
+ { label: "AVCB / CLCB / PSCIP", href: "/service/avcb" },
+ { label: "PRECEND", href: "/service/precend" },
+ { label: "PGRS", href: "/service/pgrs" },
+];
+---
+<ServiceLanding
+ seoTitle="Regularização de Empresa em Belo Horizonte | Eugênio Engenharia"
+ metaDescription="Empresa com pendências em Belo Horizonte? A Eugênio Engenharia identifica as exigências e conduz a regularização ambiental, urbanística e de incêndio."
+ canonicalPath="/service/regularizacao-empresa-belo-horizonte"
+ title="Regularização de Empresa em Belo Horizonte"
+ subtitle="Sua empresa está funcionando, mas você não sabe se está totalmente regular? Identificamos as pendências e estruturamos o caminho necessário para a regularização."
+ whatsappMessage="Olá, vi a página sobre Regularização de Empresa em Belo Horizonte e gostaria de solicitar um diagnóstico da minha empresa."
+ sections={sections}
+ faqs={faqs}
+ relatedLinks={relatedLinks}
+/>

@@ -1,0 +1,229 @@
+---
+import "../index.css";
+import Header from "../components/Header.tsx";
+import Footer from "../components/Footer.tsx";
+import logoHeader from "../assets/logoHeader.png";
+import { ArrowRight, CheckCircle2, MapPin } from "lucide-react";
+
+type ContentSection = {
+	title: string;
+	paragraphs?: string[];
+	bullets?: string[];
+};
+
+type FaqItem = {
+	question: string;
+	answer: string;
+};
+
+type RelatedLink = {
+	label: string;
+	href: string;
+};
+
+interface Props {
+	seoTitle: string;
+	metaDescription: string;
+	canonicalPath: string;
+	eyebrow?: string;
+	title: string;
+	subtitle: string;
+	whatsappMessage: string;
+	highlights?: string[];
+	sections: ContentSection[];
+	faqs?: FaqItem[];
+	relatedLinks?: RelatedLink[];
+}
+
+const {
+	seoTitle,
+	metaDescription,
+	canonicalPath,
+	eyebrow = "Regularização de empreendimentos",
+	title,
+	subtitle,
+	whatsappMessage,
+	highlights = [
+		"Análise do enquadramento antes do protocolo",
+		"Condução técnica do processo",
+		"Orientação sobre próximos passos e pendências",
+	],
+	sections,
+	faqs = [],
+	relatedLinks = [],
+} = Astro.props;
+
+const canonical = `https://www.eugenioengenharia.com.br${canonicalPath}`;
+const whatsappUrl = `https://wa.me/5531983320618?text=${encodeURIComponent(whatsappMessage)}`;
+
+const faqSchema = faqs.length
+	? JSON.stringify({
+			"@context": "https://schema.org",
+			"@type": "FAQPage",
+			mainEntity: faqs.map((faq) => ({
+				"@type": "Question",
+				name: faq.question,
+				acceptedAnswer: {
+					"@type": "Answer",
+					text: faq.answer,
+				},
+			})),
+		})
+	: null;
+---
+
+<html lang="pt-BR">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="icon" type="image/png" href="/logo.jpeg" />
+		<link rel="canonical" href={canonical} />
+		<title>{seoTitle}</title>
+		<meta name="description" content={metaDescription} />
+		<meta property="og:title" content={seoTitle} />
+		<meta property="og:description" content={metaDescription} />
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content={canonical} />
+		<script async src="https://www.googletagmanager.com/gtag/js?id=AW-17372022613"></script>
+		<script is:inline>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+			gtag('config', 'AW-17372022613');
+		</script>
+		{faqSchema && <script type="application/ld+json" set:html={faqSchema} />}
+	</head>
+
+	<body class="bg-[#F7F7F7] text-neutral-800">
+		<Header client:idle />
+
+		<main class="pt-20">
+			<section class="bg-[#262E33] text-white overflow-hidden">
+				<div class="w-11/12 xl:w-[80%] mx-auto py-14 md:py-20 grid lg:grid-cols-[1.35fr_0.65fr] gap-10 items-center">
+					<div>
+						<p class="uppercase tracking-[0.18em] text-yellow-400 text-sm font-semibold mb-4">{eyebrow}</p>
+						<h1 class="text-4xl md:text-5xl xl:text-6xl font-bold leading-tight max-w-5xl">{title}</h1>
+						<p class="text-lg md:text-xl text-neutral-300 mt-6 max-w-3xl leading-relaxed">{subtitle}</p>
+
+						<div class="mt-8 flex flex-col sm:flex-row gap-4">
+							<a
+								href={whatsappUrl}
+								target="_blank"
+								rel="noopener noreferrer"
+								class="js-whatsapp-cta inline-flex items-center justify-center gap-2 bg-yellow-400 hover:bg-yellow-300 text-black font-semibold rounded-xl px-6 py-3 transition-colors"
+							>
+								Solicitar análise <ArrowRight className="w-5 h-5" />
+							</a>
+							<a
+								href="/#servicos"
+								class="inline-flex items-center justify-center border border-neutral-500 hover:border-yellow-400 rounded-xl px-6 py-3 font-medium transition-colors"
+							>
+								Ver outros serviços
+							</a>
+						</div>
+
+						<p class="mt-5 flex items-center gap-2 text-sm text-neutral-400">
+							<MapPin className="w-4 h-4 text-yellow-400" />
+							Belo Horizonte • Contagem • Região Metropolitana
+						</p>
+					</div>
+
+					<aside class="bg-white text-neutral-800 rounded-3xl p-7 md:p-8 shadow-2xl border-t-8 border-yellow-400">
+						<img src={logoHeader.src} alt="Eugênio Engenharia" class="h-20 object-contain object-left mb-5" />
+						<h2 class="text-2xl font-semibold mb-5">Como conduzimos</h2>
+						<ul class="space-y-4">
+							{highlights.map((item) => (
+								<li class="flex gap-3">
+									<CheckCircle2 className="w-6 h-6 text-yellow-500 shrink-0 mt-0.5" />
+									<span>{item}</span>
+								</li>
+							))}
+						</ul>
+					</aside>
+				</div>
+			</section>
+
+			<section class="w-11/12 xl:w-[70%] mx-auto py-12 md:py-16">
+				<div class="space-y-12">
+					{sections.map((section) => (
+						<article class="bg-white rounded-2xl shadow-sm border border-neutral-200 p-6 md:p-9">
+							<h2 class="text-2xl md:text-3xl font-semibold mb-5 border-l-4 border-yellow-400 pl-4">{section.title}</h2>
+							{section.paragraphs?.map((paragraph) => (
+								<p class="text-neutral-700 leading-relaxed mt-4">{paragraph}</p>
+							))}
+							{section.bullets && section.bullets.length > 0 && (
+								<ul class="mt-5 grid gap-3">
+									{section.bullets.map((bullet) => (
+										<li class="flex gap-3 text-neutral-700">
+											<CheckCircle2 className="w-5 h-5 text-yellow-500 shrink-0 mt-0.5" />
+											<span>{bullet}</span>
+										</li>
+									))}
+								</ul>
+							)}
+						</article>
+					))}
+				</div>
+
+				{faqs.length > 0 && (
+					<section class="mt-14">
+						<p class="uppercase tracking-[0.18em] text-yellow-600 text-sm font-semibold mb-2">Dúvidas frequentes</p>
+						<h2 class="text-3xl md:text-4xl font-semibold mb-7">Perguntas frequentes</h2>
+						<div class="space-y-4">
+							{faqs.map((faq) => (
+								<details class="bg-white border border-neutral-200 rounded-xl p-5 shadow-sm group">
+									<summary class="font-semibold cursor-pointer">{faq.question}</summary>
+									<p class="mt-4 text-neutral-700 leading-relaxed">{faq.answer}</p>
+								</details>
+							))}
+						</div>
+					</section>
+				)}
+
+				{relatedLinks.length > 0 && (
+					<section class="mt-14 bg-neutral-900 text-white rounded-2xl p-7 md:p-9">
+						<h2 class="text-2xl md:text-3xl font-semibold mb-5">Regularizações relacionadas</h2>
+						<div class="flex flex-wrap gap-3">
+							{relatedLinks.map((link) => (
+								<a href={link.href} class="rounded-full bg-neutral-800 hover:bg-yellow-400 hover:text-black px-4 py-2 transition-colors">
+									{link.label}
+								</a>
+							))}
+						</div>
+					</section>
+				)}
+
+				<section class="mt-14 rounded-3xl bg-yellow-400 p-7 md:p-10 text-neutral-900 flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6">
+					<div>
+						<h2 class="text-2xl md:text-3xl font-bold">Quer saber qual é o próximo passo do seu caso?</h2>
+						<p class="mt-2 text-neutral-800">Envie uma mensagem e descreva a situação do empreendimento para iniciarmos a análise.</p>
+					</div>
+					<a
+						href={whatsappUrl}
+						target="_blank"
+						rel="noopener noreferrer"
+						class="js-whatsapp-cta bg-neutral-900 hover:bg-neutral-800 text-white font-semibold rounded-xl px-6 py-3 text-center whitespace-nowrap"
+					>
+						Solicitar análise
+					</a>
+				</section>
+			</section>
+		</main>
+
+		<Footer />
+
+		<script is:inline>
+			document.querySelectorAll('.js-whatsapp-cta').forEach((link) => {
+				link.addEventListener('click', () => {
+					if (typeof gtag === 'function') {
+						gtag('event', 'conversion', {
+							'send_to': 'AW-17372022613/FNwgCKDb4YIcENWO0NtA',
+							'value': 1.0,
+							'currency': 'BRL'
+						});
+					}
+				});
+			});
+		</script>
+	</body>
+</html>
