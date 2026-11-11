@@ -12,30 +12,31 @@ import Blog from "../components/Blog";
 
 <html lang="pt-BR">
   <head>
-    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" type="image/png" href="/logo.jpeg" />
-    <title>Eugenio Engenharia</title>
+    <link rel="canonical" href="https://www.eugenioengenharia.com.br/" />
+    <title>Eugênio Engenharia | Regularização de Empresas em Belo Horizonte</title>
+    <meta
+      name="description"
+      content="Regularização de empreendimentos e gestão da regularidade em Belo Horizonte e Região Metropolitana. Licenciamento Ambiental, ALF, AVCB/CLCB, PRECEND, PGRS e regularizações urbanísticas."
+    />
+    <meta property="og:title" content="Eugênio Engenharia | Regularização de Empresas" />
+    <meta
+      property="og:description"
+      content="Conduzimos a regularização do empreendimento e estruturamos a gestão necessária para que ele continue regular."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.eugenioengenharia.com.br/" />
 
-    <!-- Google tag (gtag.js) -->
+    <!-- Google Ads: tag base. A conversão deve ser registrada em uma ação real de contato, não no carregamento da página. -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17372022613"></script>
-
-    <!-- Base tag + Conversão no carregamento -->
     <script is:inline>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-
-      // Tag base
       gtag('config', 'AW-17372022613');
-
-      // Event snippet (conversão)
-      gtag('event', 'conversion', {
-        'send_to': 'AW-17372022613/FNwgCKDb4YIcENWO0NtA',
-        'value': 1.0,
-        'currency': 'BRL'
-      });
     </script>
-
   </head>
   <body>
     <Header client:idle />
